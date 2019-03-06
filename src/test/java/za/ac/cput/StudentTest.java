@@ -3,6 +3,7 @@ package za.ac.cput;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -29,12 +30,19 @@ public class StudentTest
         assertNotSame(myStudent.getStudNo(),myStudent2.getStudNo());
     }
 
+    //Failing test
 
-    @Test
-    public static void fail(String message) {
-        if (message == null) {
-            throw new AssertionError();
-        }
-        throw new AssertionError(message);
+    @Test(timeout = 5000)
+    public void testSlowMethod() {
+        //...
     }
+
+    @Ignore
+    @Test
+    public void checkQualification()
+    {
+        Student myStudent3 = new Student(1554,"John","CPUT","Engineering", 2018);
+        assertNotSame(myStudent.getStudQualification(),myStudent3.getStudQualification());
+    }
+
 }
