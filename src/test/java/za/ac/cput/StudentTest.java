@@ -6,14 +6,9 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-/**
- * Unit test for simple Student.
- */
 public class StudentTest
 {
-    /**
-     * Rigorous Test :-)
-     */
+
     Student myStudent = new Student(1055,"Jayde", "CPUT","photography",2017);
 
     //Object equality
@@ -33,7 +28,7 @@ public class StudentTest
 
     }
 
-    //
+    //failing test
     @Test
     public void studentDescription()
     {
